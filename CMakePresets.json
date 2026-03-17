@@ -1,11 +1,43 @@
 {
-  "version": 6,
+  "version": 2,
   "cmakeMinimumRequired": {
-    "major": 3,
-    "minor": 26,
-    "patch": 0
+    "major": 4,
+    "minor": 2,
+    "patch": 3
   },
-  "configurePresets": [],
-  "buildPresets": [],
+  "configurePresets": [
+    {
+      "name": "dev-debug",
+      "displayName": "Development Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dev-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "HELIX_WARNINGS_AS_ERRORS": "ON"
+      }
+    },
+    {
+      "name": "dev-release",
+      "displayName": "Development Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dev-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "HELIX_WARNINGS_AS_ERRORS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build-dev-debug",
+      "configurePreset": "dev-debug"
+    },
+    {
+      "name": "build-dev-release",
+      "configurePreset": "dev-release"
+    }
+  ],
   "testPresets": []
 }

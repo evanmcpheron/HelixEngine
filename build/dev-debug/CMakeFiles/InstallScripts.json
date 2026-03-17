@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/cmake_install.cmake",
+		"/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/cmake_install.cmake",
+		"/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/cmake_install.cmake",
+		"/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/cmake_install.cmake",
+		"/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,17 @@
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/engine_core.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/app_runtime.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/rebuild_cache.dir

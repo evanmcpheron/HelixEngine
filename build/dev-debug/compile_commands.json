@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug",
+  "command": "/usr/bin/c++ -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/include -g -std=c++2b -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -o engine/core/CMakeFiles/engine_core.dir/src/Application.cpp.o -c /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/src/Application.cpp",
+  "file": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/src/Application.cpp",
+  "output": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/engine_core.dir/src/Application.cpp.o"
+},
+{
+  "directory": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug",
+  "command": "/usr/bin/c++ -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/include -g -std=c++2b -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror -o apps/runtime/CMakeFiles/app_runtime.dir/src/main.cpp.o -c /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/src/main.cpp",
+  "file": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/src/main.cpp",
+  "output": "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/app_runtime.dir/src/main.cpp.o"
+}
+]

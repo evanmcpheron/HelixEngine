@@ -1,0 +1,5 @@
+# ninja log v7
+1	249	1773758105791904478	apps/runtime/CMakeFiles/app_runtime.dir/src/main.cpp.o	d1c1c2979babc04d
+1	448	1773758105791595559	engine/core/CMakeFiles/engine_core.dir/src/Application.cpp.o	db4cf171e2373b6
+449	487	1773758106239547200	lib/libengine_core.a	a109994d5ea0475e
+487	523	1773758106278033246	bin/helix_runtime	c4ac16796075bc76
