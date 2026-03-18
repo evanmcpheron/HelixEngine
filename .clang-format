@@ -1,0 +1,103 @@
+---
+# .clang-format
+# Solid default for a modern C++ project / engine-style repo.
+
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: Latest
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+
+# Line length
+ColumnLimit: 100
+
+# Braces
+BreakBeforeBraces: Allman
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+# Short statements
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+
+# Classes / access modifiers
+AccessModifierOffset: -4
+EmptyLineBeforeAccessModifier: LogicalBlock
+EmptyLineAfterAccessModifier: Never
+IndentAccessModifiers: false
+
+# Switches
+IndentCaseLabels: true
+IndentCaseBlocks: true
+
+# Namespaces
+NamespaceIndentation: All
+FixNamespaceComments: true
+CompactNamespaces: false
+
+# Pointers / references
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# Functions / params
+BinPackArguments: false
+BinPackParameters: false
+AlignAfterOpenBracket: Align
+PenaltyBreakBeforeFirstCallParameter: 1
+
+# Constructors
+BreakConstructorInitializersBeforeComma: false
+ConstructorInitializerIndentWidth: 4
+PackConstructorInitializers: NextLine
+
+# Includes
+SortIncludes: true
+IncludeBlocks: Regroup
+
+# Alignment
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: Align
+AlignTrailingComments: true
+
+# Spaces
+SpaceBeforeParens: ControlStatements
+SpaceBeforeCpp11BracedList: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: Never
+SpaceInEmptyParentheses: false
+
+# Empty lines / keeping code readable
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# Comments
+ReflowComments: true
+
+# Misc
+Cpp11BracedListStyle: true
+DerivePointerAlignment: false
+SortUsingDeclarations: Lexicographic
+...
