@@ -97,8 +97,6 @@ build engine/core/CMakeFiles/engine_core.dir/src/Application.cpp.o: CXX_COMPILER
   INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/include
   OBJECT_DIR = engine/core/CMakeFiles/engine_core.dir
   OBJECT_FILE_DIR = engine/core/CMakeFiles/engine_core.dir/src
-  TARGET_COMPILE_PDB = engine/core/CMakeFiles/engine_core.dir/engine_core.pdb
-  TARGET_PDB = lib/libengine_core.pdb
   TARGET_SUPPORT_DIR = engine/core/CMakeFiles/engine_core.dir
 
 
@@ -116,9 +114,8 @@ build lib/libengine_core.a: CXX_STATIC_LIBRARY_LINKER__engine_core_Debug engine/
   OBJECT_DIR = engine/core/CMakeFiles/engine_core.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = engine/core/CMakeFiles/engine_core.dir/engine_core.pdb
   TARGET_FILE = lib/libengine_core.a
-  TARGET_PDB = lib/libengine_core.pdb
+  TARGET_PDB = engine_core.a.dbg
   TARGET_SUPPORT_DIR = engine/core/CMakeFiles/engine_core.dir
 
 
@@ -163,6 +160,84 @@ build engine/core/rebuild_cache: phony engine/core/CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target engine_math
+
+
+#############################################
+# Order-only phony target for engine_math
+
+build cmake_object_order_depends_target_engine_math: phony || .
+
+build engine/math/CMakeFiles/engine_math.dir/src/Math.cpp.o: CXX_COMPILER__engine_math_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/math/src/Math.cpp || cmake_object_order_depends_target_engine_math
+  CONFIG = Debug
+  DEP_FILE = engine/math/CMakeFiles/engine_math.dir/src/Math.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Woverloaded-virtual -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/math/include
+  OBJECT_DIR = engine/math/CMakeFiles/engine_math.dir
+  OBJECT_FILE_DIR = engine/math/CMakeFiles/engine_math.dir/src
+  TARGET_SUPPORT_DIR = engine/math/CMakeFiles/engine_math.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target engine_math
+
+
+#############################################
+# Link the static library lib/libengine_math.a
+
+build lib/libengine_math.a: CXX_STATIC_LIBRARY_LINKER__engine_math_Debug engine/math/CMakeFiles/engine_math.dir/src/Math.cpp.o
+  ARCH_FLAGS = -arch arm64
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = engine/math/CMakeFiles/engine_math.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libengine_math.a
+  TARGET_PDB = engine_math.a.dbg
+  TARGET_SUPPORT_DIR = engine/math/CMakeFiles/engine_math.dir
+
+
+#############################################
+# Utility command for test
+
+build engine/math/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math && /opt/homebrew/bin/ctest
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build engine/math/test: phony engine/math/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build engine/math/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math && /opt/homebrew/bin/ccmake -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build engine/math/edit_cache: phony engine/math/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build engine/math/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build engine/math/rebuild_cache: phony engine/math/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
 # Object build statements for EXECUTABLE target app_runtime
 
 
@@ -178,8 +253,6 @@ build apps/runtime/CMakeFiles/app_runtime.dir/src/main.cpp.o: CXX_COMPILER__app_
   INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/include
   OBJECT_DIR = apps/runtime/CMakeFiles/app_runtime.dir
   OBJECT_FILE_DIR = apps/runtime/CMakeFiles/app_runtime.dir/src
-  TARGET_COMPILE_PDB = apps/runtime/CMakeFiles/app_runtime.dir/
-  TARGET_PDB = bin/helix_runtime.pdb
   TARGET_SUPPORT_DIR = apps/runtime/CMakeFiles/app_runtime.dir
 
 
@@ -198,9 +271,8 @@ build bin/helix_runtime: CXX_EXECUTABLE_LINKER__app_runtime_Debug apps/runtime/C
   OBJECT_DIR = apps/runtime/CMakeFiles/app_runtime.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = apps/runtime/CMakeFiles/app_runtime.dir/
   TARGET_FILE = bin/helix_runtime
-  TARGET_PDB = bin/helix_runtime.pdb
+  TARGET_PDB = helix_runtime.dbg
   TARGET_SUPPORT_DIR = apps/runtime/CMakeFiles/app_runtime.dir
 
 
@@ -285,6 +357,45 @@ build apps/editor/rebuild_cache: phony apps/editor/CMakeFiles/rebuild_cache.util
 # /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt
 # =============================================================================
 
+# =============================================================================
+# Object build statements for EXECUTABLE target helix_engine_tests
+
+
+#############################################
+# Order-only phony target for helix_engine_tests
+
+build cmake_object_order_depends_target_helix_engine_tests: phony || cmake_object_order_depends_target_Catch2 cmake_object_order_depends_target_Catch2WithMain cmake_object_order_depends_target_engine_math
+
+build tests/CMakeFiles/helix_engine_tests.dir/test_vector2.cpp.o: CXX_COMPILER__helix_engine_tests_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/test_vector2.cpp || cmake_object_order_depends_target_helix_engine_tests
+  CONFIG = Debug
+  DEP_FILE = tests/CMakeFiles/helix_engine_tests.dir/test_vector2.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/math/include -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = tests/CMakeFiles/helix_engine_tests.dir
+  OBJECT_FILE_DIR = tests/CMakeFiles/helix_engine_tests.dir
+  TARGET_SUPPORT_DIR = tests/CMakeFiles/helix_engine_tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target helix_engine_tests
+
+
+#############################################
+# Link the executable bin/helix_engine_tests
+
+build bin/helix_engine_tests tests/helix_engine_tests-b12d07c_tests.cmake | ${cmake_ninja_workdir}tests/helix_engine_tests-b12d07c_tests.cmake: CXX_EXECUTABLE_LINKER__helix_engine_tests_Debug tests/CMakeFiles/helix_engine_tests.dir/test_vector2.cpp.o | lib/libengine_math.a lib/libCatch2Maind.a lib/libCatch2d.a || lib/libCatch2Maind.a lib/libCatch2d.a lib/libengine_math.a
+  CONFIG = Debug
+  FLAGS = -g -arch arm64
+  LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names
+  LINK_LIBRARIES = lib/libengine_math.a  lib/libCatch2Maind.a  lib/libCatch2d.a
+  OBJECT_DIR = tests/CMakeFiles/helix_engine_tests.dir
+  POST_BUILD = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests && /opt/homebrew/bin/cmake -D TEST_TARGET=helix_engine_tests -D TEST_EXECUTABLE=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/bin/helix_engine_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=helix_engine_tests_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/helix_engine_tests-b12d07c_tests.cmake -P /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/extras/CatchAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = bin/helix_engine_tests
+  TARGET_PDB = helix_engine_tests.dbg
+  TARGET_SUPPORT_DIR = tests/CMakeFiles/helix_engine_tests.dir
+
 
 #############################################
 # Utility command for test
@@ -322,15 +433,1130 @@ build tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build tests/rebuild_cache: phony tests/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build _deps/catch2-build/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build && /opt/homebrew/bin/ctest
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/test: phony _deps/catch2-build/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/catch2-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build && /opt/homebrew/bin/ccmake -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/edit_cache: phony _deps/catch2-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/catch2-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/rebuild_cache: phony _deps/catch2-build/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Catch2
+
+
+#############################################
+# Order-only phony target for Catch2
+
+build cmake_object_order_depends_target_Catch2: phony || .
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/benchmark/catch_chronometer.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_analyse.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/benchmark/detail/catch_analyse.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_analyse.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/benchmark/detail/catch_benchmark_function.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/benchmark/detail/catch_run_for_at_least.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/benchmark/detail/catch_stats.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/generators/catch_generator_exception.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/generators/catch_generators.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/generators/catch_generators_random.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_automake.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_common_base.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_compact.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_console.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_cumulative_base.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_event_listener.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_helpers.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_json.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_json.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_json.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_junit.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_multi.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_registrars.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_sonarqube.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_streaming_base.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_tap.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_teamcity.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/reporters/catch_reporter_xml.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_capture.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_config.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_exception.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_generatortracker.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_registry_hub.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_reporter.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_reporter_factory.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/interfaces/catch_interfaces_testcase.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_approx.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_assertion_result.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_config.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_get_random_seed.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_message.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_registry_hub.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_session.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_tag_alias_autoregistrar.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_test_case_info.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_test_spec.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_timer.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_tostring.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_totals.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_translate_exception.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_translate_exception.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_translate_exception.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/catch_version.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_assertion_handler.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_case_insensitive_comparisons.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_clara.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_commandline.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_console_colour.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_context.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_debug_console.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_debugger.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_decomposer.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_enforce.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_enum_values_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_errno_guard.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_exception_translator_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_fatal_condition_handler.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_floating_point_helpers.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_getenv.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_getenv.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_getenv.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_istream.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_jsonwriter.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_jsonwriter.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_jsonwriter.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_lazy_expr.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_leak_detector.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_list.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_message_info.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_output_redirect.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_parse_numbers.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_parse_numbers.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_parse_numbers.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_polyfills.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_random_number_generator.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_random_seed_generation.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_reporter_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_reporter_spec_parser.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_result_type.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_reusable_string_stream.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_run_context.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_section.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_singletons.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_source_line_info.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_startup_exception_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_stdstreams.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_string_manip.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_stringref.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_tag_alias_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_case_info_hasher.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_case_registry_impl.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_case_tracker.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_failure_exception.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_failure_exception.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_failure_exception.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_registry.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_test_spec_parser.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_textflow.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_uncaught_exceptions.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_wildcard_pattern.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_xmlwriter.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_container_properties.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_exception.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_floating_point.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_predicate.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_quantifiers.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_string.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/catch_matchers_templated.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+build _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o: CXX_COMPILER__Catch2_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/matchers/internal/catch_matchers_impl.cpp || cmake_object_order_depends_target_Catch2
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Catch2
+
+
+#############################################
+# Link the static library lib/libCatch2d.a
+
+build lib/libCatch2d.a: CXX_STATIC_LIBRARY_LINKER__Catch2_Debug _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/catch_chronometer.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_analyse.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_benchmark_function.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_run_for_at_least.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/benchmark/detail/catch_stats.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generator_exception.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/generators/catch_generators_random.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_automake.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_common_base.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_compact.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_console.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_cumulative_base.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_event_listener.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_helpers.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_json.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_junit.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_multi.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_registrars.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_sonarqube.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_streaming_base.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_tap.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_teamcity.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/reporters/catch_reporter_xml.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_capture.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_config.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_exception.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_generatortracker.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_registry_hub.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_reporter_factory.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/interfaces/catch_interfaces_testcase.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_approx.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_assertion_result.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_config.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_get_random_seed.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_message.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_registry_hub.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_session.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tag_alias_autoregistrar.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_case_info.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_test_spec.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_timer.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_tostring.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_totals.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_translate_exception.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/catch_version.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_assertion_handler.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_case_insensitive_comparisons.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_clara.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_commandline.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_console_colour.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_context.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debug_console.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_debugger.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_decomposer.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enforce.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_enum_values_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_errno_guard.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_exception_translator_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_fatal_condition_handler.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_floating_point_helpers.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_getenv.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_istream.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_jsonwriter.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_lazy_expr.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_leak_detector.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_list.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_message_info.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_output_redirect.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_parse_numbers.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_polyfills.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_number_generator.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_random_seed_generation.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reporter_spec_parser.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_result_type.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_reusable_string_stream.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_run_context.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_section.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_singletons.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_source_line_info.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_startup_exception_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stdstreams.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_string_manip.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_stringref.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_tag_alias_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_info_hasher.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_registry_impl.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_case_tracker.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_failure_exception.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_registry.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_test_spec_parser.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_textflow.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_uncaught_exceptions.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_wildcard_pattern.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/internal/catch_xmlwriter.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_container_properties.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_exception.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_floating_point.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_predicate.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_quantifiers.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_string.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/catch_matchers_templated.cpp.o _deps/catch2-build/src/CMakeFiles/Catch2.dir/catch2/matchers/internal/catch_matchers_impl.cpp.o
+  ARCH_FLAGS = -arch arm64
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libCatch2d.a
+  TARGET_PDB = Catch2d.a.dbg
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2.dir
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Catch2WithMain
+
+
+#############################################
+# Order-only phony target for Catch2WithMain
+
+build cmake_object_order_depends_target_Catch2WithMain: phony || cmake_object_order_depends_target_Catch2
+
+build _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o: CXX_COMPILER__Catch2WithMain_unscanned_Debug /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/internal/catch_main.cpp || cmake_object_order_depends_target_Catch2WithMain
+  CONFIG = Debug
+  DEP_FILE = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o.d
+  FLAGS = -g -std=c++2b -arch arm64 -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/=
+  INCLUDES = -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/src/catch2/.. -I/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/generated-includes
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+  OBJECT_FILE_DIR = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Catch2WithMain
+
+
+#############################################
+# Link the static library lib/libCatch2Maind.a
+
+build lib/libCatch2Maind.a: CXX_STATIC_LIBRARY_LINKER__Catch2WithMain_Debug _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/catch2/internal/catch_main.cpp.o || lib/libCatch2d.a
+  ARCH_FLAGS = -arch arm64
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libCatch2Maind.a
+  TARGET_PDB = Catch2Maind.a.dbg
+  TARGET_SUPPORT_DIR = _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+
+
+#############################################
+# Utility command for test
+
+build _deps/catch2-build/src/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src && /opt/homebrew/bin/ctest
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/src/test: phony _deps/catch2-build/src/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/catch2-build/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src && /opt/homebrew/bin/ccmake -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/src/edit_cache: phony _deps/catch2-build/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/catch2-build/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/le-evanmcpheron/Documents/Code/personal/helix-engine -B/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/catch2-build/src/rebuild_cache: phony _deps/catch2-build/src/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build Catch2: phony lib/libCatch2d.a
+
+build Catch2WithMain: phony lib/libCatch2Maind.a
 
 build app_runtime: phony bin/helix_runtime
 
 build engine_core: phony lib/libengine_core.a
 
+build engine_math: phony lib/libengine_math.a
+
+build helix_engine_tests: phony bin/helix_engine_tests
+
 build helix_runtime: phony bin/helix_runtime
 
+build libCatch2Maind.a: phony lib/libCatch2Maind.a
+
+build libCatch2d.a: phony lib/libCatch2d.a
+
 build libengine_core.a: phony lib/libengine_core.a
+
+build libengine_math.a: phony lib/libengine_math.a
 
 # =============================================================================
 # Folder targets.
@@ -340,7 +1566,21 @@ build libengine_core.a: phony lib/libengine_core.a
 #############################################
 # Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
 
-build codegen: phony engine/core/codegen apps/runtime/codegen apps/editor/codegen tests/codegen
+build codegen: phony engine/core/codegen engine/math/codegen apps/runtime/codegen apps/editor/codegen tests/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build
+
+build _deps/catch2-build/codegen: phony _deps/catch2-build/src/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src
+
+build _deps/catch2-build/src/codegen: phony
 
 # =============================================================================
 
@@ -366,16 +1606,37 @@ build engine/core/codegen: phony
 # =============================================================================
 
 #############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math
+
+build engine/math/codegen: phony
+
+# =============================================================================
+
+#############################################
 # Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests
 
-build tests/codegen: phony
+build tests/codegen: phony _deps/catch2-build/codegen
 
 # =============================================================================
 
 #############################################
 # Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug
 
-build all: phony engine/core/all apps/runtime/all apps/editor/all tests/all
+build all: phony engine/core/all engine/math/all apps/runtime/all apps/editor/all tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build
+
+build _deps/catch2-build/all: phony _deps/catch2-build/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src
+
+build _deps/catch2-build/src/all: phony lib/libCatch2d.a lib/libCatch2Maind.a
 
 # =============================================================================
 
@@ -401,9 +1662,16 @@ build engine/core/all: phony lib/libengine_core.a
 # =============================================================================
 
 #############################################
+# Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math
+
+build engine/math/all: phony lib/libengine_math.a
+
+# =============================================================================
+
+#############################################
 # Folder: /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests
 
-build tests/all: phony
+build tests/all: phony bin/helix_engine_tests _deps/catch2-build/all
 
 # =============================================================================
 # Built-in targets
@@ -412,14 +1680,14 @@ build tests/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CTestTestfile.cmake: RERUN_CMAKE | /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/editor/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/CompilerWarnings.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/Options.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCCompiler.cmake CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake
+build build.ninja /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/cmake_install.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/CTestTestfile.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CTestTestfile.cmake: RERUN_CMAKE | /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/editor/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/CompilerWarnings.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/Options.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/math/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/ExternalProject/PatchInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/RepositoryInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/UpdateInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/gitclone.cmake.in /opt/homebrew/share/cmake/Modules/ExternalProject/gitupdate.cmake.in /opt/homebrew/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /opt/homebrew/share/cmake/Modules/ExternalProject/stepscript.cmake.in /opt/homebrew/share/cmake/Modules/FetchContent.cmake /opt/homebrew/share/cmake/Modules/FindGit.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCCompiler.cmake CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake _deps/catch2-src/CMake/CatchConfigOptions.cmake _deps/catch2-src/CMake/CatchMiscFunctions.cmake _deps/catch2-src/CMakeLists.txt _deps/catch2-src/extras/Catch.cmake _deps/catch2-src/src/CMakeLists.txt _deps/catch2-src/src/catch2/catch_user_config.hpp.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/editor/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/CompilerWarnings.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/Options.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCCompiler.cmake CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake: phony
+build /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/editor/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/apps/runtime/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/CompilerWarnings.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/cmake/Options.cmake /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/core/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/engine/math/CMakeLists.txt /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/tests/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake /opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/ExternalProject/PatchInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/RepositoryInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/UpdateInfo.txt.in /opt/homebrew/share/cmake/Modules/ExternalProject/gitclone.cmake.in /opt/homebrew/share/cmake/Modules/ExternalProject/gitupdate.cmake.in /opt/homebrew/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /opt/homebrew/share/cmake/Modules/ExternalProject/stepscript.cmake.in /opt/homebrew/share/cmake/Modules/FetchContent.cmake /opt/homebrew/share/cmake/Modules/FindGit.cmake /opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-C.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.2.3/CMakeCCompiler.cmake CMakeFiles/4.2.3/CMakeCXXCompiler.cmake CMakeFiles/4.2.3/CMakeSystem.cmake _deps/catch2-src/CMake/CatchConfigOptions.cmake _deps/catch2-src/CMake/CatchMiscFunctions.cmake _deps/catch2-src/CMakeLists.txt _deps/catch2-src/extras/Catch.cmake _deps/catch2-src/src/CMakeLists.txt _deps/catch2-src/src/catch2/catch_user_config.hpp.in: phony
 
 
 #############################################

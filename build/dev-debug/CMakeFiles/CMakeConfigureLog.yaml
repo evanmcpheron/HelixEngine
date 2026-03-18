@@ -1671,3 +1671,165 @@ events:
       LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.8)
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindGit.cmake:111 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake:926 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1700 (_ep_add_download_command)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1617 (__FetchContent_populateDirect)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2155:EVAL:2 (__FetchContent_doPopulation)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2155 (cmake_language)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2394 (__FetchContent_Populate)"
+      - "tests/CMakeLists.txt:9 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/Users/le-evanmcpheron/.local/share/nvim/mason/bin/"
+      - "/Users/le-evanmcpheron/Library/pnpm/"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
+      - "/opt/homebrew/opt/python@3.9/libexec/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Users/le-evanmcpheron/.cargo/bin/"
+      - "/Applications/iTerm.app/Contents/Resources/utilities/"
+      - "/opt/nvim-linux64/bin/"
+      - "/Users/le-evanmcpheron/dev/vcpkg/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/le-evanmcpheron/Applications/"
+      - "/Applications/"
+    searched_directories:
+      - "/Users/le-evanmcpheron/.local/share/nvim/mason/bin/git"
+      - "/Users/le-evanmcpheron/Library/pnpm/git"
+      - "/Library/Frameworks/Python.framework/Versions/3.14/bin/git"
+      - "/opt/homebrew/opt/python@3.9/libexec/bin/git"
+      - "/opt/homebrew/bin/git"
+      - "/opt/homebrew/sbin/git"
+      - "/usr/local/bin/git"
+      - "/System/Cryptexes/App/usr/bin/git"
+    found: "/usr/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/Users/le-evanmcpheron/.local/share/nvim/mason/bin"
+        - "/Users/le-evanmcpheron/Library/pnpm"
+        - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
+        - "/opt/homebrew/opt/python@3.9/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Users/le-evanmcpheron/.cargo/bin"
+        - "/Applications/iTerm.app/Contents/Resources/utilities"
+        - "/opt/nvim-linux64/bin"
+        - "/Users/le-evanmcpheron/dev/vcpkg"
+        - "/opt/nvim-linux64/bin"
+        - "/Users/le-evanmcpheron/dev/vcpkg"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/le-evanmcpheron/Applications"
+        - "/Applications"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
+      - "build/dev-debug/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:12 (check_cxx_compiler_flag)"
+      - "build/dev-debug/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:119 (add_cxx_flag_if_supported_to_targets)"
+      - "build/dev-debug/_deps/catch2-src/src/CMakeLists.txt:352 (add_build_reproducibility_settings)"
+    checks:
+      - "Performing Test HAVE_FLAG__ffile_prefix_map__Users_le_evanmcpheron_Documents_Code_personal_helix_engine_build_dev_debug__deps_catch2_src__"
+    directories:
+      source: "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/CMakeScratch/TryCompile-mpbBJE"
+      binary: "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/CMakeScratch/TryCompile-mpbBJE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/extras;/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/CMake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAVE_FLAG__ffile_prefix_map__Users_le_evanmcpheron_Documents_Code_personal_helix_engine_build_dev_debug__deps_catch2_src__"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/CMakeScratch/TryCompile-mpbBJE'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_bc9f9
+        [1/2] /usr/bin/c++ -DHAVE_FLAG__ffile_prefix_map__Users_le_evanmcpheron_Documents_Code_personal_helix_engine_build_dev_debug__deps_catch2_src__  -std=c++2b -arch arm64   -ffile-prefix-map=/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-src/= -MD -MT CMakeFiles/cmTC_bc9f9.dir/src.cxx.o -MF CMakeFiles/cmTC_bc9f9.dir/src.cxx.o.d -o CMakeFiles/cmTC_bc9f9.dir/src.cxx.o -c /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/CMakeFiles/CMakeScratch/TryCompile-mpbBJE/src.cxx
+        [2/2] : && /usr/bin/c++ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_bc9f9.dir/src.cxx.o -o cmTC_bc9f9   && :
+        
+      exitCode: 0
+...

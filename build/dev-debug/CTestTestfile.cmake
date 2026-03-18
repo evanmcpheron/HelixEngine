@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("engine/core")
+subdirs("engine/math")
 subdirs("apps/runtime")
 subdirs("apps/editor")
 subdirs("tests")

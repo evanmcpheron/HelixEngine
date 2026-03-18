@@ -5,6 +5,10 @@
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/test.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/edit_cache.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/core/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/CMakeFiles/engine_math.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/engine/math/CMakeFiles/rebuild_cache.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/app_runtime.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/test.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/runtime/CMakeFiles/edit_cache.dir
@@ -12,6 +16,15 @@
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/test.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/edit_cache.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/apps/editor/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/helix_engine_tests.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/test.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/edit_cache.dir
 /Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/tests/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/CMakeFiles/rebuild_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CMakeFiles/Catch2.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CMakeFiles/test.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CMakeFiles/edit_cache.dir
+/Users/le-evanmcpheron/Documents/Code/personal/helix-engine/build/dev-debug/_deps/catch2-build/src/CMakeFiles/rebuild_cache.dir

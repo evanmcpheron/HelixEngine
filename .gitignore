@@ -1,0 +1,124 @@
+# ------------------------------
+# Build directories
+# ------------------------------
+build/
+build-*/
+cmake-build-*/
+out/
+dist/
+
+# ------------------------------
+# CMake generated files
+# ------------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+Testing/
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log
+.rules.ninja
+
+# CMake user/package files
+CMakeUserPresets.json
+CPackConfig.cmake
+CPackSourceConfig.cmake
+_CPack_Packages/
+
+# ------------------------------
+# Test / coverage artifacts
+# ------------------------------
+coverage/
+coverage.xml
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# ------------------------------
+# Binaries / libraries
+# ------------------------------
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.so.*
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.elf
+
+# ------------------------------
+# Debug symbols / dumps
+# ------------------------------
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.stackdump
+*.dump
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+
+# ------------------------------
+# IDEs / editors
+# ------------------------------
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.idea/
+*.iml
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+
+# ------------------------------
+# OS files
+# ------------------------------
+.DS_Store
+Thumbs.db
+.desktop.ini
+
+# ------------------------------
+# Package managers / deps
+# ------------------------------
+# vcpkg installed artifacts if local to repo
+vcpkg_installed/
+
+# Conan
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+
+# ------------------------------
+# Archives / packaged outputs
+# ------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# ------------------------------
+# Temporary files
+# ------------------------------
+tmp/
+temp/
+.cache/

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2)
+cmake_minimum_required(VERSION 4.2.3)
 
 project(
   HelixEngine
@@ -22,6 +22,7 @@ include(cmake/Options.cmake)
 include(cmake/CompilerWarnings.cmake)
 
 add_subdirectory(engine/core)
+add_subdirectory(engine/math)
 add_subdirectory(apps/runtime)
 add_subdirectory(apps/editor)
 add_subdirectory(tests)
