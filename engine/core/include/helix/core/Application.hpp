@@ -27,6 +27,7 @@ public:
   int run();
 
 private:
+  void sanitize_config();
   void startup();
   void tick();
   void shutdown();

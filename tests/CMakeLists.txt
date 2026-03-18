@@ -10,10 +10,12 @@ FetchContent_MakeAvailable(Catch2)
 
 add_executable(helix_engine_tests
   test_vector2.cpp
+  test_logging.cpp
 )
 
 target_link_libraries(helix_engine_tests
   PRIVATE
+    helix::engine_core
     helix::engine_math
     Catch2::Catch2WithMain
 )
